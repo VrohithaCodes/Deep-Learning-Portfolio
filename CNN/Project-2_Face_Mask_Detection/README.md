@@ -20,6 +20,10 @@
 - Bounding box around the detected face.
 - Prediction displayed above the detected face.
 
+### Version 3
+- Real-time webcam face mask detection.
+- Multiple face support.
+- Live prediction using OpenCV + CNN.
 ---
 
 ## Workflow
@@ -67,7 +71,13 @@ Bounding Box + Label
   - Occluded faces
 
 - Incorrect face detection leads to incorrect CNN predictions because the cropped image is inaccurate.
+During Version 3 development, several practical challenges were encountered:
 
+- Understanding the webcam processing pipeline.
+- Converting OpenCV images into PyTorch tensors.
+- Managing different image formats (OpenCV → PIL → Tensor).
+- Integrating the trained CNN model into a live webcam application.
+- Maintaining real-time performance.
 ---
 
 ## Future Improvements
